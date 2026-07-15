@@ -1,0 +1,604 @@
+/* ==========================================
+   VARIABLES
+========================================== */
+
+:root{
+
+    --bg:#F4F7FB;
+    --card:#FFFFFF;
+
+    --text:#0F172A;
+    --text-light:#64748B;
+
+    --border:#E2E8F0;
+
+    --green:#16A34A;
+    --red:#DC2626;
+
+    --primary:#2563EB;
+
+    --radius:18px;
+
+    --shadow:0 12px 30px rgba(15,23,42,.08);
+
+}
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+header{
+
+    height:75px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 40px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:100;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+.logo i{
+
+    color:var(--primary);
+
+    font-size:24px;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--text-light);
+
+    font-weight:500;
+
+    transition:.25s;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+.navbar-icons{
+
+    display:flex;
+
+    gap:20px;
+
+    font-size:20px;
+
+}
+
+.navbar-icons i{
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.navbar-icons i:hover{
+
+    color:var(--primary);
+
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.container{
+
+    width:95%;
+
+    max-width:1500px;
+
+    margin:35px auto;
+
+    display:grid;
+
+    grid-template-columns:300px 1fr;
+
+    gap:30px;
+
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+    height:fit-content;
+
+}
+
+.sidebar h2{
+
+    margin-bottom:20px;
+
+}
+
+/* ==========================================
+   TARJETAS DE ACTIVOS
+========================================== */
+
+.stock-card{
+
+    background:#F8FAFC;
+
+    border:1px solid transparent;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.stock-card:hover{
+
+    border-color:var(--primary);
+
+    transform:translateY(-3px);
+
+}
+
+.stock-card.active{
+
+    background:#EFF6FF;
+
+    border-color:var(--primary);
+
+}
+
+.stock-card h3{
+
+    font-size:1rem;
+
+    margin-bottom:6px;
+
+}
+
+.stock-card p{
+
+    color:var(--text-light);
+
+    font-size:.9rem;
+
+}
+
+.stock-card .price{
+
+    margin-top:12px;
+
+    font-weight:700;
+
+    font-size:1.15rem;
+
+}
+
+/* ==========================================
+   CONTENIDO
+========================================== */
+
+.content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.hero h1{
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+
+}
+
+.hero p{
+
+    color:var(--text-light);
+
+}
+
+.price-box{
+
+    text-align:right;
+
+}
+
+.price-box h2{
+
+    font-size:3rem;
+
+}
+
+#change{
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+}
+
+.positive{
+
+    color:var(--green);
+
+}
+
+.negative{
+
+    color:var(--red);
+
+}
+
+/* ==========================================
+   KPIs
+========================================== */
+
+.kpis{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.kpi{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:25px;
+
+    transition:.25s;
+
+}
+
+.kpi:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.kpi p{
+
+    color:var(--text-light);
+
+    margin-bottom:10px;
+
+}
+
+.kpi h3{
+
+    font-size:1.7rem;
+
+}
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:30px;
+
+}
+
+.card-title{
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+   GRÁFICA
+========================================== */
+
+canvas{
+
+    width:100% !important;
+
+    height:420px !important;
+
+}
+
+/* ==========================================
+   TABLA
+========================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#F8FAFC;
+
+}
+
+th{
+
+    text-align:left;
+
+    padding:15px;
+
+}
+
+td{
+
+    padding:14px;
+
+    border-top:1px solid var(--border);
+
+}
+
+tbody tr{
+
+    transition:.2s;
+
+}
+
+tbody tr:hover{
+
+    background:#F8FAFC;
+
+}
+
+/* ==========================================
+   SCROLL SIDEBAR
+========================================== */
+
+#stockList{
+
+    max-height:650px;
+
+    overflow-y:auto;
+
+    padding-right:6px;
+
+}
+
+#stockList::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+#stockList::-webkit-scrollbar-thumb{
+
+    background:#CBD5E1;
+
+    border-radius:10px;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+    .container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sidebar{
+
+        order:2;
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .hero{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .price-box{
+
+        text-align:left;
+
+    }
+
+    .kpis{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:700px){
+
+    header{
+
+        padding:0 20px;
+
+    }
+
+    nav{
+
+        display:none;
+
+    }
+
+    .kpis{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero h1{
+
+        font-size:1.5rem;
+
+    }
+
+    .price-box h2{
+
+        font-size:2.2rem;
+
+    }
+
+    canvas{
+
+        height:300px !important;
+
+    }
+
+    .card{
+
+        padding:20px;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    table{
+
+        font-size:.85rem;
+
+    }
+
+    th,td{
+
+        padding:10px;
+
+    }
+
+}
