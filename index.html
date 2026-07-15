@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Investment Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- NAVBAR -->
+    <!-- ========================================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Investment Dashboard</span>
+
+        </div>
+
+        <nav>
+
+            <a href="#">Dashboard</a>
+            <a href="#">Portafolio</a>
+            <a href="#">Mercado</a>
+
+        </nav>
+
+        <div class="navbar-icons">
+
+            <i class="fa-regular fa-bell"></i>
+
+            <i class="fa-regular fa-user"></i>
+
+        </div>
+
+    </header>
+
+    <!-- ========================================= -->
+    <!-- CONTENEDOR -->
+    <!-- ========================================= -->
+
+    <main class="container">
+
+        <!-- ========================================= -->
+        <!-- PANEL IZQUIERDO -->
+        <!-- ========================================= -->
+
+        <aside class="sidebar">
+
+            <h2>Mis activos</h2>
+
+            <!-- Aquí JavaScript agregará las tarjetas -->
+
+            <div id="stockList">
+
+            </div>
+
+        </aside>
+
+        <!-- ========================================= -->
+        <!-- PANEL DERECHO -->
+        <!-- ========================================= -->
+
+        <section class="content">
+
+            <!-- HERO -->
+
+            <section class="hero">
+
+                <div>
+
+                    <h1 id="company">
+
+                        Selecciona un activo
+
+                    </h1>
+
+                    <p id="ticker">
+
+                        -
+
+                    </p>
+
+                </div>
+
+                <div class="price-box">
+
+                    <h2 id="price">
+
+                        $0.00
+
+                    </h2>
+
+                    <span id="change">
+
+                        0%
+
+                    </span>
+
+                </div>
+
+            </section>
+
+            <!-- KPIs -->
+
+            <section class="kpis">
+
+                <div class="kpi">
+
+                    <p>Apertura</p>
+
+                    <h3 id="open">$0.00</h3>
+
+                </div>
+
+                <div class="kpi">
+
+                    <p>Máximo</p>
+
+                    <h3 id="high">$0.00</h3>
+
+                </div>
+
+                <div class="kpi">
+
+                    <p>Mínimo</p>
+
+                    <h3 id="low">$0.00</h3>
+
+                </div>
+
+                <div class="kpi">
+
+                    <p>Volumen</p>
+
+                    <h3 id="volume">0</h3>
+
+                </div>
+
+            </section>
+
+            <!-- GRAFICA -->
+
+            <section class="card">
+
+                <div class="card-title">
+
+                    Evolución del precio
+
+                </div>
+
+                <canvas id="stockChart"></canvas>
+
+            </section>
+
+            <!-- TABLA -->
+
+            <section class="card">
+
+                <div class="card-title">
+
+                    Histórico
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Fecha</th>
+
+                            <th>Cierre</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="historyTable">
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
